@@ -1,0 +1,33 @@
+package net.ukr.shonen;
+
+import java.util.Scanner;
+
+public class MainNum {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Input first number");
+		int a = sc.nextInt();
+		System.out.println("Input second number");
+		int b = sc.nextInt();
+		System.out.println("Input trid number");
+		int c = sc.nextInt();
+		System.out.println("Input fourth number");
+		int d = sc.nextInt();
+
+		int max;
+
+		max = a;
+		if (b > a) {
+			max = b;
+		} else if (c > b) {
+			max = c;
+		} else if (d > c) {
+			max = d;
+		}
+
+		System.out.println("Max number = " + max);
+
+	}
+
+}

@@ -1,0 +1,19 @@
+package net.ukr.shonen;
+
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
+public class Main {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Date date = new Date();
+		SimpleDateFormat sdfOne = new SimpleDateFormat("'Today is' dd ");
+		
+		String result = sdfOne.format(date);
+		
+		System.out.println(result);
+
+	}
+
+}

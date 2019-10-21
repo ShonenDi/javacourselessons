@@ -1,0 +1,27 @@
+package net.ukr.shonen;
+
+import java.util.Calendar;
+import java.util.Date;
+
+public class ToDate {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Calendar cl1 = Calendar.getInstance();
+		cl1.set(Calendar.YEAR, 2018);
+		cl1.set(Calendar.MONTH, Calendar.AUGUST);
+		cl1.set(Calendar.DAY_OF_MONTH, 20);
+		
+		Calendar cl2 = Calendar.getInstance();
+		cl2.set(Calendar.YEAR, 2018);
+		cl2.set(Calendar.MONTH, Calendar.JUNE);
+		cl2.set(Calendar.DAY_OF_MONTH, 20);
+		
+		Date date = cl2.getTime();
+		
+		System.out.println(date);
+		
+
+	}
+
+}

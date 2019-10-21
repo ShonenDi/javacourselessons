@@ -1,0 +1,44 @@
+package net.ukr.shonen;
+
+import java.io.File;
+import java.io.IOException;
+import java.io.PrintWriter;
+
+public class RandomString {
+
+	public static void main(String[] args) {
+		
+		String[]  goods = new String[] {"Americano" , "Latte", "Tea", "Espresso", "Capuchino"};
+		int[] prise = new int []{7, 8, 7, 7, 8};
+		int[]cups = new int[]{67, 45, 30, 53, 23};
+		
+		File file = new File("report.csv");
+		
+		String report = createReport(goods, prise, cups);
+		saveStringToFile(report, file);
+		
+		
+
+	}
+	
+	public static String createReport (String[]goods,int[]price,int[]cups){
+		String report = "";
+		
+		for(int i = 0;i <cups.length;i++){
+			report += goods[i]+ "," + price[i] + "," + cups[i] + System.lineSeparator();
+		}
+		
+		return report;
+			}
+
+	public static void saveStringToFile(String text, File file) {
+		try (PrintWriter pw = new PrintWriter(file)) {
+
+			pw.println(text);
+
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+	}
+
+}

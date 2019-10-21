@@ -1,0 +1,14 @@
+package net.ukr.shonen;
+
+public class MainFormator {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		String result = String.format("%.2f", Math.PI);
+		
+		System.out.println(result);
+
+	}
+
+}

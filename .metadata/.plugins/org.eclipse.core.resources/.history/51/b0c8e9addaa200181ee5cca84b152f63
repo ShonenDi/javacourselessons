@@ -1,0 +1,26 @@
+package net.ukr.shonen;
+
+import java.io.File;
+import java.io.IOException;
+import java.io.PrintWriter;
+
+public class RandomString {
+
+	public static void main(String[] args) {
+		File file = new File("a.txt");
+		
+		saveStringToFile("Hello world!", file);
+
+	}
+
+	public static void saveStringToFile(String text, File file) {
+		try (PrintWriter pw = new PrintWriter(file)) {
+			
+			pw.println(text);
+
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+	}
+
+}
